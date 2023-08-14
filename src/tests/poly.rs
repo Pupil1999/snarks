@@ -7,7 +7,7 @@ mod test {
         domain::EvaluationDomain,
         domain::GeneralEvaluationDomain
     };
-    use ark_bn254::Fr;
+    use ark_bls12_377::Fr;
 
     #[test]
     fn get_roots() {
@@ -30,7 +30,7 @@ mod test {
         let coeffs = vec![Fr::from(1); 5];
         let poly = P::<Fr>::from_coefficients_vec(coeffs);
 
-        // 不需要填充0
+        // No need to padding zero
         let ffts = domain.fft(&poly.coeffs);
         
         // 

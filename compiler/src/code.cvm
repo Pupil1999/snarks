@@ -1,0 +1,4 @@
+func getEcc(public x: int, y, z) {
+    let y = x + z;
+    return y;
+}
